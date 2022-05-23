@@ -8,12 +8,14 @@ body {
   position: relative;
   & > div {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -50%);
   }
 }
+
 #difficulty {
+  top: 40%;
   text-align: center;
   font-size: 30px;
   h1 {
@@ -24,20 +26,27 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
-    button {
-      all: unset;
-      border: 1px solid black;
-      border-radius: 40px;
-      transition: 0.2s;
-      padding: 11px 35px 10px;
-      cursor: pointer;
-      &:hover {
-        background-color: black;
-        color: white;
-      }
-    }
   }
 }
+button {
+  all: unset;
+  border: 1px solid black;
+  border-radius: 40px;
+  transition: 0.2s;
+  padding: 11px 35px 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+#timer {
+  position: absolute;
+  top: 100px;
+  font-size: 50px;
+}
+
 #cardSlot {
   position: absolute;
   display: grid;
@@ -57,7 +66,7 @@ body {
   grid-template-rows: repeat(4, 200px);
   grid-gap: 20px;
 }
-.mediumWrap {
+.normalWrap {
   grid-template-columns: repeat(6, 160px);
   grid-template-rows: repeat(4, 200px);
   grid-gap: 20px;
@@ -66,4 +75,17 @@ body {
   grid-template-columns: repeat(6, 120px);
   grid-template-rows: repeat(6, 160px);
   grid-gap: 20px;
+}
+
+#result {
+  width: 100%;
+  text-align: center;
+  top: 40%;
+  h2 {
+    font-size: 70px;
+    margin-bottom: 20px;
+  }
+  button {
+    font-size: 26px;
+  }
 }
