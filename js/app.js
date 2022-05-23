@@ -145,9 +145,10 @@ function showResult(winLose) {
 
   if (winLose === "win") {
     toggle = "on";
-    resultText.innerText = "You Win!";
+    resultText.innerText = "You Win! 🎉";
   } else {
     resultText.innerText = "Time's Up!";
+    resultText.classList.add("timesUp");
   }
 }
 

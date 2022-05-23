@@ -23,7 +23,7 @@ function startTimer() {
   const timer = setInterval(() => {
     sec.innerText--;
     let secNum = parseInt(sec.innerText);
-    secNum < "5" ? (sec.style.color = "red") : null;
+    secNum < "6" ? (sec.style.color = "red") : null;
 
     const check = setInterval(() => {
       if (sec.innerText === "0") {

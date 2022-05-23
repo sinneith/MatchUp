@@ -78,7 +78,7 @@ button {
 }
 
 #result {
-  width: 100%;
+  width: 50%;
   text-align: center;
   top: 40%;
   h2 {
@@ -87,5 +87,17 @@ button {
   }
   button {
     font-size: 26px;
+  }
+}
+
+.timesUp {
+  animation: timesUp 0.2s linear 2;
+}
+@keyframes timesUp {
+  25% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(-4deg);
   }
 }
