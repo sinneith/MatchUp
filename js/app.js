@@ -73,7 +73,10 @@ function showCard(event) {
         cardImgArr = [...cardImg.slice(0, 18), ...cardImg.slice(0, 18)];
         break;
     }
-
+    card.addEventListener(
+      "click",
+      (event) => (event.target.style.transform = "rotateY(180deg)")
+    );
     card.addEventListener("click", flipCard);
     card.addEventListener("click", onSuccess);
   }
@@ -105,13 +108,15 @@ function checkMatch(clickedCard) {
     for (let i = 0; i < cardArr.length; i++) {
       if (cardArr[i].id === flippedCard.index) {
         setTimeout(() => {
-          cardArr[i].style.backgroundImage = "url(../img/card.png)";
+          cardArr[i].style.backgroundImage = "url(../img/cardback.png)";
+          cardArr[i].style.transform = `rotateY(-180deg)`;
         }, 600);
       }
     }
     flippedCard = { img: "", index: "" };
     setTimeout(() => {
-      clickedCard.style.backgroundImage = "url(../img/card.png)";
+      clickedCard.style.backgroundImage = "url(../img/cardback.png)";
+      clickedCard.style.transform = `rotateY(-180deg)`;
     }, 600);
   } else {
     clickedCard.classList.add("correct");
