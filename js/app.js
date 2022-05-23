@@ -5,7 +5,7 @@ const cardSlot = document.getElementById("cardSlot");
 const retryBtn = document.getElementById("retry");
 
 let cardImg = [
-  "url(../img/1.png)",
+  /* "url(../img/1.png)",
   "url(../img/2.png)",
   "url(../img/3.png)",
   "url(../img/4.png)",
@@ -22,7 +22,25 @@ let cardImg = [
   "url(../img/15.png)",
   "url(../img/16.png)",
   "url(../img/17.png)",
-  "url(../img/18.png)",
+  "url(../img/18.png)", */
+  "url(img/1.png)",
+  "url(img/2.png)",
+  "url(img/3.png)",
+  "url(img/4.png)",
+  "url(img/5.png)",
+  "url(img/6.png)",
+  "url(img/7.png)",
+  "url(img/8.png)",
+  "url(img/9.png)",
+  "url(img/10.png)",
+  "url(img/11.png)",
+  "url(img/12.png)",
+  "url(img/13.png)",
+  "url(img/14.png)",
+  "url(img/15.png)",
+  "url(img/16.png)",
+  "url(img/17.png)",
+  "url(img/18.png)",
 ];
 let cardArr = [];
 let cardImgArr = [];
@@ -108,14 +126,16 @@ function checkMatch(clickedCard) {
     for (let i = 0; i < cardArr.length; i++) {
       if (cardArr[i].id === flippedCard.index) {
         setTimeout(() => {
-          cardArr[i].style.backgroundImage = "url(../img/cardback.png)";
+          //cardArr[i].style.backgroundImage = "url(../img/cardback.png)";
+          cardArr[i].style.backgroundImage = "url(img/cardback.png)";
           cardArr[i].style.transform = `rotateY(-180deg)`;
         }, 600);
       }
     }
     flippedCard = { img: "", index: "" };
     setTimeout(() => {
-      clickedCard.style.backgroundImage = "url(../img/cardback.png)";
+      //clickedCard.style.backgroundImage = "url(../img/cardback.png)";
+      clickedCard.style.backgroundImage = "url(img/cardback.png)";
       clickedCard.style.transform = `rotateY(-180deg)`;
     }, 600);
   } else {
